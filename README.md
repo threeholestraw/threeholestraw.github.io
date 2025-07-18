@@ -1,6 +1,8 @@
-# React + TypeScript + Vite
+# Threeholestraw Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+We are using a minimal Vite + React + Typescript template to host on github pages. I don't wanna pay for porkbun and cloudflare for a static website...
+
+This site will become a portfolio for all my work! Whether that be blog posts or math puzzles or research reports or opinion articles.
 
 Currently, two official plugins are available:
 
