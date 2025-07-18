@@ -1,0 +1,15 @@
+{
+    "rules": {
+        "semi": ["error", "never"],
+        "no-extra-semi": "error",
+        "@typescript-eslint/semi": ["error", "never"],
+        "@typescript-eslint/no-extra-semi": "error"
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "parser": "@typescript-eslint/parser",
+            "plugins": ["@typescript-eslint"]
+        }
+    ]
+}
