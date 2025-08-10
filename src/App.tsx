@@ -1,21 +1,13 @@
 import { useState } from 'react'
-import { Routes, Route, Link, Outlet } from 'react-router'
+import { Routes, Route } from 'react-router'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
 import './App.css'
+import { Layout } from './routes/layout'
+import { Home } from './routes/home'
 
-function Layout() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
-      </nav>
-      <Outlet />
-    </div>
-  )
-}
-
-function Home() {
+function Homev2() {
   const [count, setCount] = useState(0)
 
   return (
@@ -44,7 +36,7 @@ function Home() {
   )
 }
 
-function About() {
+const About = () => {
   return <h2>About Page coming soon</h2>
 }
 

@@ -1,7 +1,7 @@
-import { Routes, Route, Link } from 'react-router'
+import { Link } from 'react-router'
 import viteLogo from '~/vite.svg'
 
-const Home = () => {
+export const Home = () => {
   return (
     <>
       <div>
@@ -24,5 +24,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home;
