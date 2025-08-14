@@ -31,5 +31,14 @@
     "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "javascript.preferences.importModuleSpecifier": "non-relative"
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css",
+    "typescript": "typescript"
+  },
+  "editor.quickSuggestions": {
+      "strings": true
+  }
 }
