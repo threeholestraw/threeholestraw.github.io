@@ -12,7 +12,13 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
-      }
+      },
+      zIndex: {
+        base: '0',
+        content: '1',
+        floating: '5',
+        nav: '10',
+      },
     }
   },
 }
