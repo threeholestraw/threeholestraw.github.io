@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router";
 export const Layout = () => {
   return (
     <div>
-      <div className="bg-black">
+      <div className="bg-black bg-gray ">
 
       </div>
       <nav className="p-">

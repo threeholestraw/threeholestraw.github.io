@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}', './index.html'],
   theme: {
     extend: {
       spacing: {
@@ -11,7 +11,7 @@ module.exports = {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
       }
     }
   },

@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import viteLogo from '~/vite.svg'
+import viteLogo from '/vite.svg'
 
 export const Home = () => {
   return (
@@ -14,7 +14,7 @@ export const Home = () => {
         <Link to="/about">
           this button does nothing...
         </Link>
-        <p>
+        <p className="bg-black text-red-100">
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
