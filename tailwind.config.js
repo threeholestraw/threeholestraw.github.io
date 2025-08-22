@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
+        helvetica: ['Helvetica Neue', 'sans-serif'],
       }
     }
   },
