@@ -11,7 +11,7 @@ export const Home = () => {
   // const chevronRef = useRef<SVGSVGElement | null>(null)
 
   return (
-    <>
+    <div className="-mt-16">
       <section
         className="font-helvetica
           relative flex flex-col items-center justify-center
@@ -40,7 +40,7 @@ export const Home = () => {
           <button
             onClick={() => workRef.current?.scrollIntoView({ behavior: 'smooth' })}
             className=" text-white hover:text-blue-100
-              p-2 bg-blue-600 rounded-sm"
+              py-2 px-4 bg-blue-600 rounded-sm"
           >
             Learn More
           </button>
@@ -89,6 +89,6 @@ export const Home = () => {
           Click on the Vite and React logos to learn more
         </p>
       </div>
-    </>
+    </div>
   )
 }

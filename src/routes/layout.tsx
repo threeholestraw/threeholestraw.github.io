@@ -29,7 +29,7 @@ const Nav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
       variants={
         {
           visible: { y: "0%" },
-          hidden: { y: "-90%" },
+          hidden: { y: "-87%" },
           peeking: { y: "0%", cursor: "pointer" },
         } as Variants
       }
@@ -37,13 +37,13 @@ const Nav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
         duration: 0.2,
         ease: [0.4, 0, 0.2, 1],
       }}
-      className="sticky top-0 z-10 flex w-full justify-center pt-3"
+      className="sticky top-0 mx-16 z-10 items-center pt-3 pointer-events-none"
     >
-      <nav className="flex justify-between items-center gap-5 rounded-2xl p-2 pl-4 border border-gray-300 bg-white">
+      <nav className="flex justify-between items-center text-white gap-5 rounded-2xl p-2 pl-4 border border-gray-300 backdrop-blur-md pointer-events-auto max-w-7xl mx-auto">
         <Link to="#" className="h-min text-2xl font-[Helvetica_Neue]">
           Alan Zheng
         </Link>
-        <div className="flex justify-between gap-3 *:rounded-xl *:border *:border-[#ccc] *:px-3 *:py-1 *:transition-colors *:duration-300 *:hover:bg-[#ccc] *:focus-visible:bg-[#ccc]">
+        <div className="flex justify-between gap-3 *:rounded-xl *:border *:border-white *:px-3 *:py-1 *:transition-colors *:duration-300 *:hover:bg-[#ccc] *:focus-visible:bg-[#ccc]">
           <Link to="#" className="font-sans">Products</Link>
           <Link className="md:hidden" to="#">
             ...
@@ -67,14 +67,9 @@ export const Layout = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({ container: ref });
   return (
-    <div ref={ref} className="h-dvh w-full overflow-auto flex flex-col">
-      <div className="min-h-[300vh] bg-linear-to-b from-[#22344c] to-[#537eb9]">
-        <Nav scrollY={scrollY} />
-        <hr className="stroke-10"/>
-      </div>
-      <div className="">
-        <Outlet />
-      </div>
+    <div ref={ref} className="h-dvh w-full overflow-auto bg-gray-800">
+      <Nav scrollY={scrollY} />
+      <Outlet />
     </div>
   )
 }
