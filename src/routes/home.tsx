@@ -1,24 +1,24 @@
 import { Link } from 'react-router'
 import { useRef } from 'react'
-// import { ChevronDownIcon } from '@heroicons/react/24/outline'
-import { WorkLine } from '../components/WorkLine'
 import { motion } from 'motion/react'
+import { WorkLine } from '../components/WorkLine'
 
 import viteLogo from '/vite.svg'
 import nauticalLogo from '/nautical-logo.webp'
 import palonaAi from '/palona-ai.svg'
+import { TypeEffect } from '@/components/TypeEffect'
 
 export const Home = () => {
   const workRef = useRef<HTMLElement | null>(null)
-  // const chevronRef = useRef<SVGSVGElement | null>(null)
 
   return (
-    <div className="-mt-16">
+    <>
       <section
         className="font-helvetica
           relative flex flex-col items-center justify-center
-          gap-6 px-8 overflow-clip
-          h-full min-h-[90svh] min-w-full
+          gap-6 px-8 py-32 overflow-clip
+          h-[98%] min-h-fit min-w-full
+          -mt-16
           *:z-1"
         aria-label="Hero Section"
       >
@@ -35,25 +35,22 @@ export const Home = () => {
           <span className="font-light font-dm mb-2">Hey! I'm </span>
           <span className="font-bold font-varuna">Alan.</span>
         </h1>
-        {/* Typing Out Effect Component goes here */}
-        <h2 id="claude" className="-mt-6 z-1 w-fit mx-auto font-dm text-2xl text-center text-gray-300 text-[clamp(2rem,4.8vw,8rem)] relative">
-          <span className="invisible">
-            I am a <b>Developer</b>
-          </span>
-          <span className="absolute top-0 left-0 z-1">
-            I am a <span className="font-bold">Develo</span>
-          </span>
+        <h2 className="-mt-6 z-1 w-full md:w-fit md:mx-auto font-dm text-2xl text-gray-300 text-[clamp(2.5rem,4.8vw,8rem)] relative">
+            I'm a{' '}
+            <TypeEffect
+              className="font-bold"
+              words={["Software Developer", "CS + Finance Major", "Math Nerd", "Varsity Athlete"]}
+            />
         </h2>
-        <div className="md:w-auto">
+        <div className="w-full md:w-auto">
           <button
             onClick={() => workRef.current?.scrollIntoView({ behavior: 'smooth' })}
-            className=" text-white hover:text-blue-100
+            className=" text-white text-lg hover:text-blue-100
               py-2 px-4 bg-blue-600 rounded-sm"
           >
-            Learn More
+            Where I've Worked
           </button>
         </div>
-        {/* <ChevronDownIcon className="absolute bottom-2 z-2 stroke-white w-5 h-5" ref={chevronRef} /> */}
       </section>
       <section
         className="font-dm text-white md:text-center
@@ -64,10 +61,13 @@ export const Home = () => {
           Hey! I'm Alan Zheng, a <b>4<sup>th</sup></b> year <b>Computing and Financial Management</b> student at the <b className="text-[#ffd100]">University of Waterloo</b>.
         </h2>
         <p className="text-xl">
-          I'm deeply interested in <b>Finance</b>, <b>Computer Science</b> and <b>Math</b>. In my spare time, I love to fence, play chess, and solve math puzzles.
+          I'm deeply interested in <b>Finance</b>, <b>Computer Science</b> and <b>Math</b>.
         </p>
         <p className="text-xl">
-          I'm currently seeking internship opportunities to apply my skills, create something great, and learn something new.
+          In my spare time, I love to fence, play chess, and solve math puzzles.
+        </p>
+        <p className="text-xl">
+          I'm currently seeking internships to make something great and learn something new!
         </p>
       </section>
       <section id="work-experience" ref={workRef} className="font-dm text-white px-8 md:px-20 py-20 *:mb-2">
@@ -116,6 +116,6 @@ export const Home = () => {
           Click on the Vite and React logos to learn more
         </p>
       </div>
-    </div>
+    </>
   )
 }
