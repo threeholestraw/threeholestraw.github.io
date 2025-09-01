@@ -58,7 +58,7 @@ export const Home = () => {
           px-8 md:px-20 pt-20 min-w-lg *:max-w-7xl *:mx-auto"
         aria-label="About Summary"
       >
-        <h1 className="font-dm text-5xl mb-8 pb-5">
+        <h1 className="font-dm text-5xl mb-8">
           About Me
         </h1>
         <article className="*:pb-5">
@@ -77,13 +77,13 @@ export const Home = () => {
         </article>
       </section>
       <section id="work-experience" ref={workRef} className="font-dm min-w-lg text-white px-8 md:px-20 pt-20 *:mb-2">
-        <h1 className="font-dm text-5xl pb-4 md:pl-12">
+        <h1 className="font-dm text-5xl pb-4 max-w-7xl mx-auto">
           Work Experience
         </h1>
         <WorkList />
       </section>
       <section id="contact" className="font-dm min-w-lg text-gray-900 bg-slate-400 px-8 md:px-20 pt-20 mt-12">
-        <div className="max-w-7xl mx-auto flex justify-between">
+        <div className="max-w-7xl mx-auto flex justify-between items-baseline-last">
           <h1 className="text-4xl pb-12">
             Contact Me
           </h1>
