@@ -35,18 +35,18 @@ export const WorkLine: React.FC<React.PropsWithChildren<WorkLineProps>> = ({
     }
 
     return (
-        <div className="w-full max-w-7xl mx-auto *:w-full">
+        <div className="w-full max-w-7xl mx-auto">
             <div className="flex flex-row gap-8 bg-gray-900 rounded-lg py-4 px-6" onClick={handleToggle} style={{ cursor: "pointer" }}>
-                <a href={href} target="_blank" onClick={(e) => e.stopPropagation()}>
+                <a href={href} target="_blank" onClick={(e) => e.stopPropagation()} className="h-24 p-1">
                     {companyLogoComponent ? (
-                        <div className={cn("block h-24 w-auto min-w-24 p-1 drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "rounded")}>
+                        <div className={cn("block h-full w-full object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "")}>
                             {companyLogoComponent}
                         </div>
                     ) : (
                         <img
                             src={companyLogo}
                             alt={companyLogoAlt}
-                            className={cn("block h-24 w-auto min-w-24 p-1 drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "rounded")}
+                            className={cn("block max-h-full drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "")}
                         />
                     )}
                 </a>

@@ -25,7 +25,7 @@ export const WorkList = () => {
                 </ul>
             </WorkLine><WorkLine
                 companyName='Palona AI'
-                companyLogoComponent={<DynamicPalonaAILogo className="max-h-full max-w-full" />}
+                companyLogoComponent={<DynamicPalonaAILogo className="h-full max-w-full" />}
                 companyLogoAlt='Palona AI logo'
                 jobTitle='Frontend Developer'
                 startDate='October 2024'
@@ -41,7 +41,7 @@ export const WorkList = () => {
             </WorkLine>
             <WorkLine
                 companyName='Global X Canada'
-                companyLogoComponent={<DynamicGlobalXLogo className="max-h-full max-w-full" />}
+                companyLogoComponent={<DynamicGlobalXLogo className="h-full max-w-full" />}
                 companyLogoAlt='Global X Logo'
                 jobTitle='Quantitative Analyst'
                 startDate='January 2024'
@@ -57,8 +57,23 @@ export const WorkList = () => {
                 </ul>
             </WorkLine>
             <WorkLine
+                companyName='Fencing Without Limits'
+                companyLogo={'/FWLLogoWhite.png'}
+                companyLogoAlt='Fencing Without Limits Logo'
+                jobTitle='Creative + Technical Director and Producer'
+                startDate='July 2024'
+                endDate='Present'
+                location='Toronto, ON - London, ON - London, UK'
+                href='https://www.youtube.com/@FencingWithoutLimits'
+            >
+                <ul className="list-disc leading-7">
+                    <li>Coordinated, Directed, and Produced a 12-hour charity fencing livestream at the University of Waterloo, garnering 500+ viewers and raising $1200 for KidSport Kitchener-Waterloo and the UW Varsity Fencing Team.</li>
+                    <li>Designed the livestreaming software stack using OBS and Python scripts, for implementing dynamic stream elements (advertisements, timers, and real-time donations) for a streamlined viewing experience.</li>
+                </ul>
+            </WorkLine>
+            <WorkLine
                 companyName='Independent'
-                companyLogoComponent={<GenericLogo className="h-full w-full" />}
+                companyLogoComponent={<GenericLogo className="max-h-full max-w-full" />}
                 companyLogoAlt='Generic Avatar'
                 jobTitle='Olympiad Math Course Director / Instructor'
                 startDate='July 2020'

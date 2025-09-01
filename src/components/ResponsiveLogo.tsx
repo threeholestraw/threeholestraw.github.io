@@ -10,18 +10,18 @@ export const DynamicGlobalXLogo: React.FC<ResponsiveLogoProps> = ({
     alt = 'Global X Logo'
 }) => {
     return (
-        <div className={className}>
+        <div className={`h-full w-full ${className}`}>
             {/* Geometric logo for small screens */}
             <img
                 src="/globalx.svg"
                 alt={alt}
-                className="block lg:hidden h-[88px] w-auto"
+                className="block lg:hidden h-full w-auto"
             />
             {/* Text logo for large screens */}
             <img
                 src="/globalx_text_only.svg"
                 alt={alt}
-                className="hidden lg:block h-[88px] w-auto"
+                className="hidden lg:block h-full w-auto"
             />
         </div>
     )
@@ -37,13 +37,13 @@ export const DynamicPalonaAILogo: React.FC<ResponsiveLogoProps> = ({
             <img
                 src="/palona-ai-mini.svg"
                 alt={alt}
-                className="block lg:hidden h-[88px] w-auto"
+                className="block lg:hidden h-full w-auto object-contain"
             />
             {/* Text logo for large screens */}
             <img
                 src="/palona-ai.svg"
                 alt={alt}
-                className="hidden lg:block h-[88px] w-auto"
+                className="hidden lg:block h-full w-auto object-contain"
             />
         </div>
     )

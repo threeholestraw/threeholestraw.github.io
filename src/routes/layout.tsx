@@ -39,11 +39,11 @@ const StickyNav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
       }}
       className="sticky top-0 px-8 md:px-16 min-w-lg z-10 items-center pt-3 pointer-events-none"
     >
-      <nav className="flex justify-between items-center text-white gap-3 rounded-2xl p-2 pl-4 border border-gray-300 backdrop-blur-md pointer-events-auto max-w-7xl mx-auto font-dm">
-        <Link to="/" className="h-min md:text-2xl text-xl font-dm">
+      <nav className="flex justify-between items-center text-white gap-3 rounded-2xl p-2 pl-4 border border-gray-300 backdrop-blur-md pointer-events-auto max-w-7xl mx-auto">
+        <Link to="/" className="h-min text-3xl font-varuna -mb-2">
           Alan Zheng
         </Link>
-        <div className="flex justify-between gap-2 text-sm md:text-base *:rounded-xl *:border *:border-white *:px-3 *:py-1 *:transition-colors *:duration-300 *:hover:bg-[#ccc] *:focus-visible:bg-[#ccc]">
+        <div className="flex justify-between gap-2 font-dm *:rounded-xl *:border *:border-white *:px-3 *:py-1 *:transition-colors *:duration-300 *:hover:bg-[#ccc] *:focus-visible:bg-[#ccc]">
           <a href="#about-summary">
             About
           </a>
