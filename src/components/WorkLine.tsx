@@ -4,7 +4,8 @@ import { motion } from "motion/react"
 import { cn } from "@/utils/cn"
 
 interface WorkLineProps {
-    companyLogo: string
+    companyLogo?: string
+    companyLogoComponent?: React.ReactNode
     companyLogoAlt: string
     jobTitle: string
     companyName: string
@@ -17,6 +18,7 @@ interface WorkLineProps {
 
 export const WorkLine: React.FC<React.PropsWithChildren<WorkLineProps>> = ({
     companyLogo,
+    companyLogoComponent,
     companyLogoAlt,
     jobTitle,
     companyName,
@@ -34,13 +36,19 @@ export const WorkLine: React.FC<React.PropsWithChildren<WorkLineProps>> = ({
 
     return (
         <div className="w-full max-w-7xl mx-auto *:w-full">
-            <div className="flex flex-row gap-8 bg-gray-900 rounded-lg py-4 px-6" onClick={handleToggle}>
+            <div className="flex flex-row gap-8 bg-gray-900 rounded-lg py-4 px-6" onClick={handleToggle} style={{ cursor: "pointer" }}>
                 <a href={href} target="_blank" onClick={(e) => e.stopPropagation()}>
-                    <img
-                        src={companyLogo}
-                        alt={companyLogoAlt}
-                        className={cn("block h-24 w-auto min-w-24 p-1 drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "rounded")}
-                    />
+                    {companyLogoComponent ? (
+                        <div className={cn("block h-24 w-auto min-w-24 p-1 drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "rounded")}>
+                            {companyLogoComponent}
+                        </div>
+                    ) : (
+                        <img
+                            src={companyLogo}
+                            alt={companyLogoAlt}
+                            className={cn("block h-24 w-auto min-w-24 p-1 drop-shadow-[0_0_4px_rgba(255,255,255,0.1)] hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]", roundedLogo ? "rounded-full" : "rounded")}
+                        />
+                    )}
                 </a>
                 <div className="w-full *:text-end">
                     <h2 className="text-2xl">

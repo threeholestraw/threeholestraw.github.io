@@ -11,6 +11,9 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
+      colors: {
+        // Colors are now defined in src/index.css using @theme directive
+      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         // sans: ['Manrope', 'sans-serif'],
