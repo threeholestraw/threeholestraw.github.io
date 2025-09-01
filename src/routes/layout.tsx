@@ -48,9 +48,9 @@ const StickyNav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
             About
           </a>
           <a href="#work-experience">Past Work</a>
-          <Link to="#contact">
+          <a href="#contact">
             Contact
-          </Link>
+          </a>
         </div>
       </nav>
     </motion.div>

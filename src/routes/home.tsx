@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { WorkList } from '@/components/WorkList'
 import { TypeEffect } from '@/components/TypeEffect'
 
+
 export const Home = () => {
   const workRef = useRef<HTMLElement | null>(null)
 
@@ -76,10 +77,26 @@ export const Home = () => {
         </article>
       </section>
       <section id="work-experience" ref={workRef} className="font-dm min-w-lg text-white px-8 md:px-20 pt-20 *:mb-2">
-        <h1 className="w-full font-dm text-5xl pb-4 md:pl-12">
+        <h1 className="font-dm text-5xl pb-4 md:pl-12">
           Work Experience
         </h1>
         <WorkList />
+      </section>
+      <section id="contact" className="font-dm min-w-lg text-gray-900 bg-slate-400 px-8 md:px-20 pt-20 mt-12">
+        <div className="max-w-7xl mx-auto flex justify-between">
+          <h1 className="text-4xl pb-12">
+            Contact Me
+          </h1>
+          <div className="flex gap-2 text-xl *:hover:text-gray-800 *:h-fit">
+            <a href="mailto:ayzheng@uwaterloo.ca">Email</a>
+            •
+            <a href="https://www.instagram.com/alan77zheng">Instagram</a>
+            •
+            <a href="https://www.linkedin.com/in/alan-y-zheng/">LinkedIn</a>
+            •
+            <a href="https://github.com/threeholestraw">GitHub</a>
+          </div>
+        </div>
       </section>
     </>
   )
