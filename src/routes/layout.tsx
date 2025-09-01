@@ -45,12 +45,16 @@ const StickyNav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
           Alan Zheng
         </Link>
         <div className="flex justify-between gap-2 font-dm *:rounded-xl *:border *:border-white *:px-3 *:py-1 *:transition-colors *:duration-300 *:hover:bg-[#ccc] *:focus-visible:bg-[#ccc]">
+          <a href="https://drive.google.com/file/d/1qMexdBhpv6e6vz0dfWluB3sOSHaJX5Bn/view?usp=sharing" target="_blank">
+            Resume
+          </a>
           <HashLink
             to={{
               pathname: "/",
               hash: "#about-summary",
             }}
             smooth
+            className="max-md:hidden"
           >
             About
           </HashLink>
@@ -60,6 +64,7 @@ const StickyNav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
               hash: "#work-experience",
             }}
             smooth
+            className="max-md:hidden"
           >
             Past Work
           </HashLink>
