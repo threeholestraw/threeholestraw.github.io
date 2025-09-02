@@ -83,7 +83,7 @@ export const Home = () => {
         <WorkList />
       </section>
       <section id="contact" className="font-dm min-w-lg text-gray-900 bg-slate-400 px-8 md:px-20 pt-20 mt-12">
-        <div className="max-w-7xl mx-auto flex justify-between items-baseline-last">
+        <div className="max-w-7xl mx-auto flex justify-between items-baseline-last gap-8">
           <h1 className="text-4xl pb-12">
             Contact Me
           </h1>
