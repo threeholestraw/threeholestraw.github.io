@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Development files that shouldn't be deployed
+index.html
+
 # Editor directories and files
 !.vscode/extensions.json
 .idea
