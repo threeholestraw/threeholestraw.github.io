@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}', './index.html'],
   theme: {
@@ -10,9 +11,20 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
+      colors: {
+        // Colors are now defined in src/index.css using @theme directive
+      },
       fontFamily: {
-        sans: ['Manrope', 'sans-serif'],
-      }
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        // sans: ['Manrope', 'sans-serif'],
+        helvetica: ['Helvetica Neue', 'sans-serif']
+      },
+      zIndex: {
+        base: '0',
+        content: '1',
+        floating: '5',
+        nav: '10',
+      },
     }
   },
 }

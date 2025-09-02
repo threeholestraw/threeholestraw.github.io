@@ -4,7 +4,12 @@ import { Layout } from './routes/layout'
 import { Home } from './routes/home'
 
 const About = () => {
-  return <h2>About Page coming soon</h2>
+  return (
+    <div className='mx-8 md:mx-20'>
+      <h1 className="mx-auto max-w-7xl text-white text-2xl my-4">More pages coming soon!</h1>
+      <h2 className="mx-auto max-w-7xl text-white text-xl my-4">This site was made using React Router and Tailwind.</h2>
+    </div>
+  )
 }
 
 function App() {
