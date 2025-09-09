@@ -68,7 +68,7 @@ export const WorkLine: React.FC<React.PropsWithChildren<WorkLineProps>> = ({
                                 animate={{ rotate: isExpanded ? 180 : 0 }}
                                 transition={{ duration: 0.1, ease: "easeOut" }}
                             >
-                                <ChevronDownIcon className="w-6 h-6 hover:stroke-2" />
+                                <ChevronDownIcon className="w-6 h-6 hover:stroke-2" style={{ cursor: "pointer" }} />
                             </motion.div>
                         </motion.button>
                     </div> : null}

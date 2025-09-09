@@ -77,6 +77,7 @@ export const Home = () => {
         </article>
       </section>
       <section id="work-experience" ref={workRef} className="font-dm min-w-lg text-white px-8 md:px-20 pt-20 *:mb-2">
+        {/* TODO add button to ACTUALLY DOWNLOAD the resume thing at the bottom so people play with the chevron first */}
         <h1 className="font-dm text-5xl pb-4 max-w-7xl mx-auto">
           Work Experience
         </h1>
@@ -87,7 +88,7 @@ export const Home = () => {
           <h1 className="text-4xl pb-12">
             Contact Me
           </h1>
-          <div className="flex gap-2 text-xl *:hover:text-gray-800 *:h-fit">
+          <div className="flex gap-2 text-xl *:hover:text-gray-800 *:hover:underline *:h-fit">
             <a href="mailto:ayzheng@uwaterloo.ca">Email</a>
             •
             <a href="https://www.instagram.com/alan77zheng">Instagram</a>

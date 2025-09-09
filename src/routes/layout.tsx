@@ -45,9 +45,6 @@ const StickyNav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
           Alan Zheng
         </Link>
         <div className="flex justify-between gap-2 font-dm *:rounded-xl *:border *:border-white *:px-3 *:py-1 *:transition-colors *:duration-300 *:hover:bg-[#ccc] *:focus-visible:bg-[#ccc]">
-          <a href="https://drive.google.com/file/d/1qMexdBhpv6e6vz0dfWluB3sOSHaJX5Bn/view?usp=sharing" target="_blank">
-            Resume
-          </a>
           <HashLink
             to={{
               pathname: "/",
@@ -68,6 +65,10 @@ const StickyNav = ({ scrollY }: { scrollY: MotionValue<number> }) => {
           >
             Past Work
           </HashLink>
+          {/* TODO add small download icon next to resume so you can tell it opens in new page */}
+          <a href="https://drive.google.com/file/d/1qMexdBhpv6e6vz0dfWluB3sOSHaJX5Bn/view?usp=sharing" target="_blank">
+            Resume
+          </a>
           <HashLink
             to={{
               pathname: "/",
